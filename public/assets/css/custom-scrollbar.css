@@ -1,0 +1,63 @@
+html.custom-scrollbar-enabled {
+    scrollbar-width: none;
+    scroll-behavior: auto !important;
+}
+
+html.custom-scrollbar-enabled::-webkit-scrollbar {
+    display: none;
+}
+
+.page-scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9998;
+    width: 14px;
+    height: 100vh;
+    touch-action: none;
+    user-select: none;
+}
+
+.page-scrollbar[hidden] {
+    display: none;
+}
+
+.page-scrollbar__thumb {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    width: 8px;
+    min-height: 36px;
+    border-radius: 8px;
+    background: rgb(79 182 141 / 65%);
+    cursor: grab;
+    opacity: 0;
+    transition: background-color 160ms ease, width 160ms ease, right 160ms ease, opacity 180ms ease;
+}
+
+.page-scrollbar:hover .page-scrollbar__thumb,
+.page-scrollbar:focus-within .page-scrollbar__thumb,
+.page-scrollbar.is-dragging .page-scrollbar__thumb,
+.page-scrollbar__thumb:focus-visible {
+    right: 2px;
+    width: 10px;
+    background: #4fb68d;
+    opacity: 1;
+    outline: none;
+}
+
+.page-scrollbar.is-dragging .page-scrollbar__thumb {
+    cursor: grabbing;
+}
+
+@media (hover: none) {
+    .page-scrollbar__thumb {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-scrollbar__thumb {
+        transition: none;
+    }
+}
