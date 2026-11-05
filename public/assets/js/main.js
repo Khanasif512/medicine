@@ -8,6 +8,50 @@
     var $window = $(window),
         $body = $("body");
 
+    $(".list-product .add-to-link a").filter(function () {
+        return $(this).find("i.ion-android-favorite-outline").length > 0;
+    }).attr({
+        "aria-label": "Add to wishlist",
+        "data-tooltip": "Add to wishlist",
+        title: "Add to wishlist"
+    });
+
+    function syncQuickView($modal) {
+        var productName = $modal.data("requestedProductName");
+
+        if (productName) {
+            $modal.find(".quickview-content .product-details-content h2, .quickview-content h2").first().text(productName);
+        }
+
+        $modal.find(".pro-details-color-wrap, .pro-details-sku-wrap, .pro-details-reference, .pro-details-reference-wrap").hide();
+        $modal.find("*").filter(function () {
+            return this.children.length === 0 && /^Reference(?:\s*:|\s*$)/i.test($(this).text().trim());
+        }).each(function () {
+            $(this).closest(".pro-details-sku, .pro-details-sku-wrap, .pro-details-reference, .pro-details-reference-wrap, li, p").hide();
+        });
+        $modal.find("p").filter(function () {
+            return /^\s*Reference\s*:/i.test($(this).text());
+        }).hide();
+    }
+
+    $(document).on("click", "a.quick_view", function () {
+        var $productName = $(this).closest(".list-product").find(".product-decs h2 .product-link").first(),
+            productName = $.trim($productName.attr("title") || $productName.attr("aria-label") || $productName.text()),
+            modalSelector = $(this).attr("data-bs-target"),
+            $modal = modalSelector ? $(modalSelector) : $();
+
+        if (productName && $modal.length) {
+            $modal.data("requestedProductName", productName);
+            window.setTimeout(function () {
+                syncQuickView($modal);
+            }, 0);
+        }
+    });
+
+    $(document).on("shown.bs.modal", "#exampleModal", function () {
+        syncQuickView($(this));
+    });
+
     /*---------------------------------
     Off Canvas Function
 -----------------------------------*/
@@ -160,9 +204,8 @@
         dots: true,
         autoplay: true,
         autoplayTimeout: 5000,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        item: 1,
+        smartSpeed: 1250,
+        items: 1,
         responsive: {
             0: {
                 items: 1
@@ -207,7 +250,7 @@
     $('.best-sell-slider').owlCarousel({
         autoplay: false,
         loop: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         dots: false,
         margin: 30,
@@ -229,13 +272,16 @@
 
             },
             768: {
-                items: 3,
+                items: 2,
             },
             992: {
-                items: 4,
+                items: 3,
             },
             1200: {
                 items: 5,
+            },
+            1400: {
+                items: 6,
             }
         }
     })
@@ -247,7 +293,7 @@
     $('.best-sell-slider-2').owlCarousel({
         autoplay: false,
         loop: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         dots: false,
         margin: 0,
@@ -285,11 +331,11 @@
     ------------------------------ */
     $('.category-slider').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         loop: false,
         nav: true,
         dots: false,
-        margin: 30,
+        margin: 12,
         responsive: {
             0: {
                 items: 1,
@@ -302,19 +348,19 @@
                 loop: true,
             },
             576: {
-                items: 1,
+                items: 2,
                 autoplay: true,
                 loop: true,
 
             },
             767: {
-                items: 2,
+                items: 3,
             },
             992: {
-                items: 3,
+                items: 4,
             },
             1200: {
-                items: 3,
+                items: 7,
             }
         }
     })
@@ -324,10 +370,10 @@
     $('.category-slider-2').owlCarousel({
         autoplay: false,
         loop: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         dots: false,
-        margin: 30,
+        margin: 12,
         responsive: {
             0: {
                 items: 1,
@@ -363,7 +409,7 @@
     ------------------------------ */
     $('.hot-deal').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
@@ -399,7 +445,7 @@
     ------------------------------ */
     $('.new-product-slider').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
@@ -418,7 +464,7 @@
                 loop: true,
             },
             480: {
-                items: 2,
+                items: 1,
                 autoplay: true,
                 loop: true,
 
@@ -433,10 +479,10 @@
                 items: 2,
             },
             1200: {
-                items: 3,
+                items: 2,
             },
             1300: {
-                items: 4,
+                items: 2,
             }
         }
     })
@@ -447,7 +493,7 @@
     ------------------------------ */
     $('.new-product-slider-2').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
@@ -494,11 +540,11 @@
     ------------------------------ */
     $('.feature-slider').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
-        items: 4,
+        items: 3,
         margin: 30,
         responsive: {
             0: {
@@ -521,13 +567,13 @@
                 items: 2,
             },
             992: {
-                items: 3,
+                items: 2,
             },
             1200: {
-                items: 3,
+                items: 2,
             },
             1300: {
-                items: 4,
+                items: 2,
             },
         },
     })
@@ -537,11 +583,11 @@
     ------------------------------ */
     $('.recent-product-slider').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
-        items: 4,
+        items: 5,
         margin: 30,
         responsive: {
             0: {
@@ -561,7 +607,7 @@
 
             },
             768: {
-                items: 3,
+                items: 2,
             },
             992: {
                 items: 4,
@@ -569,7 +615,7 @@
             1200: {
                 items: 5,
             },
-            1300: {
+            1400: {
                 items: 6,
             }
         }
@@ -582,7 +628,7 @@
         autoplay: false,
         nav: true,
         loop: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         dots: false,
         items: 5,
         responsive: {
@@ -620,7 +666,7 @@
     $('.testi-slider').owlCarousel({
         autoplay: false,
         nav: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         dots: true,
         items: 2,
         margin: 30,
@@ -656,7 +702,7 @@
     $('.blog-slider-active').owlCarousel({
         autoplay: false,
         nav: true,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         dots: false,
         items: 3,
         margin: 30,
@@ -691,7 +737,7 @@
     $('.feature-slider-2').owlCarousel({
         autoplay: false,
         nav: true,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         dots: false,
         items: 2,
         loop: false,
@@ -736,7 +782,7 @@
     ------------------------------ */
     $('.feature-slider-3').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
@@ -781,7 +827,7 @@
     $('.hot-deal-2').owlCarousel({
         autoplay: false,
         nav: true,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         dots: false,
         items: 2,
         loop: false,
@@ -821,7 +867,7 @@
     $('.hot-deal-3').owlCarousel({
         autoplay: false,
         nav: true,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         dots: false,
         items: 1,
         loop: false,
@@ -891,7 +937,7 @@
     ---------------------------------- */
     $('.category-product-slider').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
@@ -931,7 +977,7 @@
     ---------------------------------- */
     $('.single-product-slider-active').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: true,
         dots: false,
@@ -972,7 +1018,7 @@
     ---------------------------------- */
     $('.category-product-2').owlCarousel({
         autoplay: false,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         loop: false,
         dots: false,
@@ -1107,14 +1153,14 @@
     $('.quickview-slide-active').owlCarousel({
         loop: false,
         margin: 15,
-        smartSpeed: 1000,
+        smartSpeed: 1250,
         nav: true,
         dots: false,
         responsive: {
             0: {
                 items: 3,
                 autoplay: true,
-                smartSpeed: 300
+                smartSpeed: 650
             },
             576: {
                 items: 3
@@ -1139,7 +1185,7 @@
 	testi.owlCarousel({
 		autoplay :false,
 		autoplayHoverPause: true,
-		smartSpeed : 1000,
+		smartSpeed : 1250,
 		nav :false,
 		dots : true, 
 		responsiveClass:true,
@@ -1169,7 +1215,7 @@
 	testi.owlCarousel({
 		autoplay :false,
 		autoplayHoverPause: true,
-		smartSpeed : 1000,
+		smartSpeed : 1250,
 		nav :true,
 		dots : false, 
 		responsiveClass:true,

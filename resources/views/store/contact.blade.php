@@ -1,115 +1,25 @@
 @verbatim
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <!-- Mirrored from https://htmldemo.net/ecolife/ecolife/contact.html by HTTrack Website Copier/3.x [XR&CO], Mon, 02 Nov 2026 10:20:37 GMT -->
 @endverbatim
 @include('Layout.heads.head')
 @verbatim
-    <body>
-        <!-- main layout start from here -->
+
+<body>
+    <!-- main layout start from here -->
+    @endverbatim
+    @include('Layout.Preloaders.preloader')
+    @verbatim
+    <div id="main">
+        <!-- Header Start -->
         @endverbatim
-@include('Layout.Preloaders.preloader')
-@verbatim
-        <div id="main">
-            <!-- Header Start -->
-            @endverbatim
-@include('Layout.Headers.header')
-@verbatim
-            <!-- Header End -->
-            <div class="mobile-search-option pb-3 d-lg-none">
-                <div class="container-fluid">
-                    <div class="header-account-list">
-                        <div class="dropdown-search">
-                            <form action="#">
-                                <input placeholder="Search entire store here ..." type="text" />
-                                <div class="search-category">
-                                    <select class="bootstrap-select" name="poscats">
-                                        <option value="0">All categories</option>
-                                        <option value="104">
-                                            Fresh Food
-                                        </option>
-                                        <option value="183">
-                                            - - Fresh Fruit
-                                        </option>
-                                        <option value="187">
-                                            - - - - Bananas
-                                        </option>
-                                        <option value="188">
-                                            - - - - Apples &amp; Pears
-                                        </option>
-                                        <option value="189">
-                                            - - - - Berries &amp; Cherries
-                                        </option>
-                                        <option value="190">
-                                            - - - - Oranges &amp; Citrus Fruit
-                                        </option>
-                                        <option value="191">
-                                            - - - - Grapes
-                                        </option>
-                                        <option value="184">
-                                            - - Fresh Vegetables
-                                        </option>
-                                        <option value="192">
-                                            - - - - Potatoes &amp; Sweet Potatoes
-                                        </option>
-                                        <option value="193">
-                                            - - - - Onions &amp; Leeks
-                                        </option>
-                                        <option value="194">
-                                            - - - - Carrots &amp; Root Vegetables
-                                        </option>
-                                        <option value="195">
-                                            - - - - Broccoli &amp; Cauliflower
-                                        </option>
-                                        <option value="196">
-                                            - - - - Cabbages &amp; Greens
-                                        </option>
-                                        <option value="185">
-                                            - - Fresh Salad &amp; Dips
-                                        </option>
-                                        <option value="197">
-                                            - - - - Lettuce &amp; Salad bags
-                                        </option>
-                                        <option value="198">
-                                            - - - - Tomatoes
-                                        </option>
-                                        <option value="199">
-                                            - - - - Cucumber
-                                        </option>
-                                        <option value="200">
-                                            - - - - Celery
-                                        </option>
-                                        <option value="201">
-                                            - - - - Peppers
-                                        </option>
-                                        <option value="186">
-                                            - - Milk, Butter &amp; Eggs
-                                        </option>
-                                        <option value="202">
-                                            - - - - Milk
-                                        </option>
-                                        <option value="203">
-                                            - - - - Spreads &amp; Margarine
-                                        </option>
-                                        <option value="204">
-                                            - - - - Fresh Cream &amp; Custard
-                                        </option>
-                                        <option value="205">
-                                            - - - - Eggs
-                                        </option>
-                                        <option value="206">
-                                            - - - - Baking &amp; Cooking
-                                        </option>
-                                    </select>
-                                </div>
-                                <button type="submit"><i class="ion-ios-search-strong"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+        @include('Layout.Navbar.navbar')
+        @verbatim
+        <!-- Header End -->
+        
+
         <!-- offcanvas overlay start -->
         <div class="offcanvas-overlay"></div>
         <!-- offcanvas overlay end -->
@@ -178,7 +88,7 @@
             <!-- offcanvas compare & wishlist -->
             <div class="user-panel">
                 <ul class="d-flex justify-content-between">
-                    
+
                     <li>
                         <a href="/wishlist"><i class="ion-android-favorite-outline"></i>Wishlist (0)</a>
                     </li>
@@ -198,7 +108,7 @@
                                 <li><a href="/about">About Page</a></li>
                                 <li><a href="/cart">Cart Page</a></li>
                                 <li><a href="/checkout">Checkout Page</a></li>
-                                
+
                                 <li><a href="/login">Login & Regiter Page</a></li>
                                 <li><a href="/my-account">Account Page</a></li>
                                 <li><a href="/wishlist">Wishlist Page</a></li>
@@ -219,7 +129,7 @@
                                         <li><a href="/shop-list-left-sidebar">Shop List Left
                                                 Sidebar</a></li>
                                         <li><a href="/shop-list-right-sidebar">Shop List Right
-                                                        Sidebar</a></li>
+                                                Sidebar</a></li>
                                         <li><a href="/shop-filter">Shop Filter Page</a></li>
                                     </ul>
                                 </li>
@@ -283,72 +193,71 @@
             </div>
         </div>
         <!-- OffCanvas Menu End -->
-            <!-- Header End -->
-            <!-- Breadcrumb Area start -->
-            <section class="breadcrumb-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="breadcrumb-content">
-                                <h1 class="breadcrumb-hrading">Contact Page</h1>
-                                <ul class="breadcrumb-links">
-                                    <li><a href="/">Home</a></li>
-                                    <li>Contact Us</li>
-                                </ul>
+        <!-- Header End -->
+        <!-- Breadcrumb Area start -->
+        <section class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-content">
+                            <h1 class="breadcrumb-hrading">Contact Page</h1>
+                            <ul class="breadcrumb-links">
+                                <li><a href="/">Home</a></li>
+                                <li>Contact Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcrumb Area End -->
+        <!-- contact area start -->
+        <div class="contact-area mtb-60px">
+            <div class="container">
+                <div class="contact-map mb-10">
+                    <div id="map">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe id="gmap_canvas"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58405.460328222754!2d90.29723167419434!3d23.806460660543568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c72d1a5bf2a9%3A0x25a0f9a592e96ad8!2z4Kay4Ka_4KaC4KaVIOCmhuCmqiDgpqrgp43gprDgpq_gp4HgppXgp43gpqTgpr8g4Kay4Ka_4KaD!5e0!3m2!1sbn!2sbd!4v1793765929353!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                <a href="https://sites.google.com/view/maps-api-v2/mapv2"></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Breadcrumb Area End -->
-            <!-- contact area start -->
-            <div class="contact-area mtb-60px">
-                <div class="container">
-                    <div class="contact-map mb-10">
-                        <div id="map">
-                            <div class="mapouter">
-                                <div class="gmap_canvas">
-                                    <iframe id="gmap_canvas"
-                                        src="https://maps.google.com/maps?q=121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                    <a href="https://sites.google.com/view/maps-api-v2/mapv2"></a>
+                <div class="custom-row-2">
+                    <div class="col-lg-4 col-md-5">
+                        <div class="contact-info-wrap">
+                            <div class="single-contact-info">
+                                <div class="contact-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="contact-info-dec">
+                                    <p>+012 345 678 102</p>
+                                    <p>+012 345 678 102</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="custom-row-2">
-                        <div class="col-lg-4 col-md-5">
-                            <div class="contact-info-wrap">
-                                <div class="single-contact-info">
-                                    <div class="contact-icon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <div class="contact-info-dec">
-                                        <p>+012 345 678 102</p>
-                                        <p>+012 345 678 102</p>
-                                    </div>
+                            <div class="single-contact-info">
+                                <div class="contact-icon">
+                                    <i class="fa fa-globe"></i>
                                 </div>
-                                <div class="single-contact-info">
-                                    <div class="contact-icon">
-                                        <i class="fa fa-globe"></i>
-                                    </div>
-                                    <div class="contact-info-dec">
-                                        <p><a href="#">urname@email.com</a></p>
-                                        <p><a href="#">urwebsitenaem.com</a></p>
-                                    </div>
+                                <div class="contact-info-dec">
+                                    <p><a href="#">urname@email.com</a></p>
+                                    <p><a href="#">urwebsitenaem.com</a></p>
                                 </div>
-                                <div class="single-contact-info">
-                                    <div class="contact-icon">
-                                        <i class="fa fa-map-marker"></i>
-                                    </div>
-                                    <div class="contact-info-dec">
-                                        <p>Address goes here,</p>
-                                        <p>street, Crossroad 123.</p>
-                                    </div>
+                            </div>
+                            <div class="single-contact-info">
+                                <div class="contact-icon">
+                                    <i class="fa fa-map-marker"></i>
                                 </div>
-                                <div class="contact-social">
-                                    <h3>Follow Us</h3>
-                                    <div class="social-info">
+                                <div class="contact-info-dec">
+                                    <p>Address goes here,</p>
+                                    <p>street, Crossroad 123.</p>
+                                </div>
+                            </div>
+                            <div class="contact-social">
+                                <h3>Follow Us</h3>
+                                <div class="social-info">
                                         <ul>
                                             <li>
                                                 <a href="#"><i class="ion-social-facebook"></i></a>
@@ -362,55 +271,53 @@
                                             <li>
                                                 <a href="#"><i class="ion-social-google"></i></a>
                                             </li>
-                                            <li>
-                                                <a href="#"><i class="ion-social-instagram"></i></a>
-                                            </li>
                                         </ul>
                                     </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-8 col-md-7">
-                            <div class="contact-form">
-                                <div class="contact-title mb-30">
-                                    <h2>Get In Touch</h2>
-                                </div>
-                                <form class="contact-form-style" id="contact-form" action="https://whizthemes.com/nazmul/php/mail.php" method="post">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <input name="name" placeholder="Name*" type="text" />
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <input name="email" placeholder="Email*" type="email" />
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <input name="subject" placeholder="Subject*" type="text" />
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <textarea name="message" placeholder="Your Message*"></textarea>
-                                            <button class="submit" type="submit">SEND</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <p class="form-messege"></p>
+                    </div>
+                    <div class="col-lg-8 col-md-7">
+                        <div class="contact-form">
+                            <div class="contact-title mb-30">
+                                <h2>Get In Touch</h2>
                             </div>
+                            <form class="contact-form-style" id="contact-form" action="https://whizthemes.com/nazmul/php/mail.php" method="post">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input name="name" placeholder="Name*" type="text" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input name="email" placeholder="Email*" type="email" />
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input name="subject" placeholder="Subject*" type="text" />
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea name="message" placeholder="Your Message*"></textarea>
+                                        <button class="submit" type="submit">SEND</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="form-messege"></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- contact area end -->
-            <!-- Footer Area start -->
-            @endverbatim
-@include('Layout.Footers.footer')
-@verbatim
-            <!--  Footer Area End -->
         </div>
-
+        <!-- contact area end -->
+        <!-- Footer Area start -->
         @endverbatim
-@include('Layout.scripts.scripts')
-@verbatim
+        @include('Layout.Footers.footer')
+        @verbatim
+        <!--  Footer Area End -->
+    </div>
 
-<!-- Mirrored from https://htmldemo.net/ecolife/ecolife/contact.html by HTTrack Website Copier/3.x [XR&CO], Mon, 02 Nov 2026 10:20:37 GMT -->
+    @endverbatim
+    @include('Layout.scripts.scripts')
+    @verbatim
+
+    <!-- Mirrored from https://htmldemo.net/ecolife/ecolife/contact.html by HTTrack Website Copier/3.x [XR&CO], Mon, 02 Nov 2026 10:20:37 GMT -->
+
 </html>
 
 @endverbatim

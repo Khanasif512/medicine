@@ -14,65 +14,10 @@
   <div id="main">
     <!-- Header Start -->
     @endverbatim
-    @include('Layout.Headers.header-home')
+    @include('Layout.Navbar.navbar')
     @verbatim
     <!-- Header End -->
-    <div class="mobile-search-option pb-3 d-lg-none hover-style-default">
-      <div class="container-fluid">
-        <div class="header-account-list">
-          <div class="dropdown-search">
-            <form action="#">
-              <input placeholder="Search entire store here ..." type="text" />
-              <div class="search-category">
-                <select class="bootstrap-select" name="poscats">
-                  <option value="0">All categories</option>
-                  <option value="104">Fresh Food</option>
-                  <option value="183">- - Fresh Fruit</option>
-                  <option value="187">- - - - Bananas</option>
-                  <option value="188">- - - - Apples &amp; Pears</option>
-                  <option value="189">- - - - Berries &amp; Cherries</option>
-                  <option value="190">
-                    - - - - Oranges &amp; Citrus Fruit
-                  </option>
-                  <option value="191">- - - - Grapes</option>
-                  <option value="184">- - Fresh Vegetables</option>
-                  <option value="192">
-                    - - - - Potatoes &amp; Sweet Potatoes
-                  </option>
-                  <option value="193">- - - - Onions &amp; Leeks</option>
-                  <option value="194">
-                    - - - - Carrots &amp; Root Vegetables
-                  </option>
-                  <option value="195">
-                    - - - - Broccoli &amp; Cauliflower
-                  </option>
-                  <option value="196">- - - - Cabbages &amp; Greens</option>
-                  <option value="185">- - Fresh Salad &amp; Dips</option>
-                  <option value="197">
-                    - - - - Lettuce &amp; Salad bags
-                  </option>
-                  <option value="198">- - - - Tomatoes</option>
-                  <option value="199">- - - - Cucumber</option>
-                  <option value="200">- - - - Celery</option>
-                  <option value="201">- - - - Peppers</option>
-                  <option value="186">- - Milk, Butter &amp; Eggs</option>
-                  <option value="202">- - - - Milk</option>
-                  <option value="203">- - - - Spreads &amp; Margarine</option>
-                  <option value="204">
-                    - - - - Fresh Cream &amp; Custard
-                  </option>
-                  <option value="205">- - - - Eggs</option>
-                  <option value="206">- - - - Baking &amp; Cooking</option>
-                </select>
-              </div>
-              <button type="submit">
-                <i class="ion-ios-search-strong"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     <!-- offcanvas overlay start -->
     <div class="offcanvas-overlay"></div>
@@ -148,7 +93,7 @@
           src="assets/images/icons/mobile-contact.png"
           alt="" />
         <p>Call us:</p>
-        <a class="color-black" href="tel:(+800)345678">(+800)345678</a>
+        <a class="color-black" href="tel:(+8801818453778)">(+8801818453778)</a>
       </div>
       <!-- offcanvas compare & wishlist -->
       <div class="user-panel">
@@ -292,121 +237,50 @@
       </div>
     </div>
     <!-- OffCanvas Menu End -->
-    <!-- Slider Arae Start -->
-    <div class="slider-area">
-      <div class="slider-active-3 owl-carousel slider-hm8 owl-dot-style">
-        <!-- Slider Single Item Start -->
-        <div
-          class="slider-height-6 d-flex align-items-start justify-content-start bg-img"
-          style="
-              background-image: url(assets/images/slider-image/sample-1.jpg);
-            ">
-          <div class="container">
-            <div class="slider-content-1 slider-animated-1 text-left">
-              <span class="animated">NOT FRIED NOT BAKED</span>
-              <h1 class="animated">
-                Freeze Dried Fruits <br />
-                Pineapple Coconut
-              </h1>
-              <p class="animated">
-                Free Shipping On Qualified Orders Over $35
-              </p>
-              <a href="/shop-4-column" class="shop-btn animated">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <!-- Slider Single Item End -->
-        <!-- Slider Single Item Start -->
-        <div
-          class="slider-height-6 d-flex align-items-start justify-content-start bg-img"
-          style="
-              background-image: url(assets/images/slider-image/sample-2.jpg);
-            ">
-          <div class="container">
-            <div class="slider-content-1 slider-animated-1 text-left">
-              <span class="animated">100% NATURAL</span>
-              <h1 class="animated">
-                Organic Fruits <br />
-                Summer Drinks
-              </h1>
-              <p class="animated">fresh New pack Brusting Fruits</p>
-              <a href="/shop-4-column" class="shop-btn animated">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <!-- Slider Single Item End -->
+    <!-- Medical Hero Start -->
+    <section class="slider-area hero-showcase" aria-label="Featured medical products">
+      <div class="hero-image-slider" aria-hidden="true">
+        <img class="hero-image-slide" src="assets/images/hero/Essential Medical Care Essentials.png" alt="" />
+        <img class="hero-image-slide" src="assets/images/hero/Essential Medical Care Essentials.png" alt="" />
       </div>
-    </div>
-    <!-- Slider Arae End -->
-    <!-- Static Area Start -->
-    <section class="static-area mtb-60px">
-      <div class="container">
-        <div class="static-area-wrap">
-          <div class="row">
-            <!-- Static Single Item Start -->
-            <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-              <div class="single-static pb-res-md-0 pb-res-sm-0 pb-res-xs-0">
-                <img
-                  src="assets/images/icons/static-icons-1.png"
-                  alt=""
-                  class="img-responsive" />
+      <div class="container-fluid hero-showcase-wrap">
+        <div class="row g-3 align-items-stretch">
+          <aside class="col-12 col-md-3 offset-md-9">
+            <div class="hero-benefits">
+              <div class="single-static">
+                <img src="assets/images/icons/static-icons-1.png" alt="" class="img-responsive" />
                 <div class="single-static-meta">
                   <h4>Free Shipping</h4>
-                  <p>On all orders over $75.00</p>
+                  <p>On orders over $75</p>
                 </div>
               </div>
-            </div>
-            <!-- Static Single Item End -->
-            <!-- Static Single Item Start -->
-            <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-              <div
-                class="single-static pb-res-md-0 pb-res-sm-0 pb-res-xs-0 pt-res-xs-20">
-                <img
-                  src="assets/images/icons/static-icons-2.png"
-                  alt=""
-                  class="img-responsive" />
+              <div class="single-static">
+                <img src="assets/images/icons/static-icons-2.png" alt="" class="img-responsive" />
                 <div class="single-static-meta">
                   <h4>Free Returns</h4>
-                  <p>Returns are free within 9 days</p>
+                  <p>Within 9 days</p>
                 </div>
               </div>
-            </div>
-            <!-- Static Single Item End -->
-            <!-- Static Single Item Start -->
-            <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-              <div
-                class="single-static pt-res-md-30 pb-res-sm-30 pb-res-xs-0 pt-res-xs-20">
-                <img
-                  src="assets/images/icons/static-icons-3.png"
-                  alt=""
-                  class="img-responsive" />
+              <div class="single-static">
+                <img src="assets/images/icons/static-icons-3.png" alt="" class="img-responsive" />
                 <div class="single-static-meta">
-                  <h4>100% Payment Secure</h4>
-                  <p>Your payment are safe with us.</p>
+                  <h4>Secure Payments</h4>
+                  <p>Your payments are safe</p>
                 </div>
               </div>
-            </div>
-            <!-- Static Single Item End -->
-            <!-- Static Single Item Start -->
-            <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-              <div
-                class="single-static pt-res-md-30 pb-res-sm-30 pt-res-xs-20">
-                <img
-                  src="assets/images/icons/static-icons-4.png"
-                  alt=""
-                  class="img-responsive" />
+              <div class="single-static">
+                <img src="assets/images/icons/static-icons-4.png" alt="" class="img-responsive" />
                 <div class="single-static-meta">
                   <h4>Support 24/7</h4>
-                  <p>Contact us 24 hours a day</p>
+                  <p>We are here to help</p>
                 </div>
               </div>
             </div>
-            <!-- Static Single Item End -->
-          </div>
+          </aside>
         </div>
       </div>
     </section>
-    <!-- Static Area End -->
+    <!-- Medical Hero End -->
     <!-- Best Sells Area Start -->
     <section class="best-sells-area mb-30px">
       <div class="container">
@@ -453,7 +327,7 @@
             <div class="product-decs">
               <a class="inner-link" href="/shop-4-column"><span>STUDIO DESIGN</span></a>
               <h2>
-                <a href="/single-product" class="product-link">Juicy Couture Juicy Quilted Ter..</a>
+                <a href="/single-product" class="product-link">Juicy Couture Juicy Quilted</a>
               </h2>
               <div class="rating-product">
                 <i class="ion-android-star"></i>
@@ -573,7 +447,7 @@
             <div class="product-decs">
               <a class="inner-link" href="/shop-4-column"><span>GRAPHIC CORNER</span></a>
               <h2>
-                <a href="/single-product" class="product-link">Brixton Patrol All Terrain Ano..</a>
+                <a href="/single-product" class="product-link">Brixton Patrol All Terrain</a>
               </h2>
               <div class="rating-product">
                 <i class="ion-android-star"></i>
@@ -631,7 +505,7 @@
             <div class="product-decs">
               <a class="inner-link" href="/shop-4-column"><span>GRAPHIC CORNER</span></a>
               <h2>
-                <a href="/single-product" class="product-link">Juicy Couture Tricot Logo Strip..</a>
+                <a href="/single-product" class="product-link">Juicy Couture Tricot Logo</a>
               </h2>
               <div class="rating-product">
                 <i class="ion-android-star"></i>
@@ -1150,155 +1024,83 @@
         </div>
         <!-- Category Slider Start -->
         <div class="category-slider owl-carousel owl-nav-style">
-          <!-- Single item -->
           <div class="category-item">
-            <div class="category-list mb-30px">
-              <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-1.jpg"
-                    alt="" />
-                </a>
-              </div>
-              <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Fresh Vegetables</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
-              </div>
-            </div>
             <div class="category-list">
               <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-2.jpg"
-                    alt="" />
-                </a>
+                <a href="/shop-4-column"><img src="assets/images/product-image/medical/2.jpg" alt="Vitamins and supplements" /></a>
               </div>
               <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Fresh Salad & Dips</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
+                <div class="name_categories"><h4>Vitamins &amp; Supplements</h4></div>
+                <a href="/shop-4-column">Shop Now</a>
               </div>
             </div>
           </div>
-          <!-- Single item -->
           <div class="category-item">
-            <div class="category-list mb-30px">
-              <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-3.jpg"
-                    alt="" />
-                </a>
-              </div>
-              <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Fresh Fruit</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
-              </div>
-            </div>
             <div class="category-list">
               <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-4.jpg"
-                    alt="" />
-                </a>
+                <a href="/shop-4-column"><img src="assets/images/product-image/medical/3.jpg" alt="Protein and nutrition" /></a>
               </div>
               <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Baking & Cooking</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
+                <div class="name_categories"><h4>Protein &amp; Nutrition</h4></div>
+                <a href="/shop-4-column">Shop Now</a>
               </div>
             </div>
           </div>
-          <!-- Single item -->
           <div class="category-item">
-            <div class="category-list mb-30px">
-              <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-5.jpg"
-                    alt="" />
-                </a>
-              </div>
-              <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Fresh Cream & Custard</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
-              </div>
-            </div>
             <div class="category-list">
               <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-6.jpg"
-                    alt="" />
-                </a>
+                <a href="/shop-4-column"><img src="assets/images/product-image/medical/4.jpg" alt="Natural oils" /></a>
               </div>
               <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Milk, Butter & Eggs</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
+                <div class="name_categories"><h4>Natural Oils</h4></div>
+                <a href="/shop-4-column">Shop Now</a>
               </div>
             </div>
           </div>
-          <!-- Single item -->
           <div class="category-item">
-            <div class="category-list mb-30px">
-              <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-7.jpg"
-                    alt="" />
-                </a>
-              </div>
-              <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Spreads & Margarine</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
-              </div>
-            </div>
             <div class="category-list">
               <div class="category-thumb">
-                <a href="/shop-4-column">
-                  <img
-                    src="assets/images/product-image/organic/thumb-8.jpg"
-                    alt="" />
-                </a>
+                <a href="/shop-4-column"><img src="assets/images/product-image/medical/5.jpg" alt="Essential nutrients" /></a>
               </div>
               <div class="desc-listcategoreis">
-                <div class="name_categories">
-                  <h4>Fresh Vegetables</h4>
-                </div>
-                <span class="number_product">17 Products</span>
-                <a href="/shop-4-column">
-                  Shop Now <i class="ion-android-arrow-dropright-circle"></i></a>
+                <div class="name_categories"><h4>Essential Nutrients</h4></div>
+                <a href="/shop-4-column">Shop Now</a>
               </div>
             </div>
           </div>
-          <!-- Single item -->
+          <div class="category-item">
+            <div class="category-list">
+              <div class="category-thumb">
+                <a href="/shop-4-column"><img src="assets/images/product-image/medical/6.jpg" alt="Digestive health" /></a>
+              </div>
+              <div class="desc-listcategoreis">
+                <div class="name_categories"><h4>Digestive Health</h4></div>
+                <a href="/shop-4-column">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="category-list">
+              <div class="category-thumb">
+                <a href="/shop-4-column"><img src="assets/images/product-image/medical/7.jpg" alt="Everyday wellness" /></a>
+              </div>
+              <div class="desc-listcategoreis">
+                <div class="name_categories"><h4>Everyday Wellness</h4></div>
+                <a href="/shop-4-column">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="category-item">
+            <div class="category-list">
+              <div class="category-thumb">
+                <a href="/shop-4-column"><img src="assets/images/product-image/medical/10.jpg" alt="Masks and first aid" /></a>
+              </div>
+              <div class="desc-listcategoreis">
+                <div class="name_categories"><h4>Masks &amp; First Aid</h4></div>
+                <a href="/shop-4-column">Shop Now</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

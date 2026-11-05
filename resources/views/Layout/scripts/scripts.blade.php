@@ -30,6 +30,5 @@
         <!-- Main Activation JS -->
         <script src="assets/js/main.js"></script>
         <script src="assets/js/custom-scrollbar.js"></script>
-        <script src="assets/js/custom-cursor.js"></script>
     </body>
 @endverbatim

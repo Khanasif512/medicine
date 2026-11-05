@@ -31,7 +31,6 @@
         <link rel="stylesheet" href="assets/css/style.min.css">
         <link rel="stylesheet" href="assets/css/responsive.min.css">
         <link rel="stylesheet" href="assets/css/custom-scrollbar.css">
-        <link rel="stylesheet" href="assets/css/custom-cursor.css">
         <link rel="stylesheet" href="assets/css/custom-header.css">
         <link rel="stylesheet" href="assets/css/custom-footer.css">
         <link rel="stylesheet" href="assets/css/custom-store-sections.css">

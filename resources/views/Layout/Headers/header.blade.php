@@ -15,26 +15,10 @@
                             <div class="col-8 d-lg-block d-none">
                                 <div class="header-right-nav hover-style-default">
                                     <ul>
-                                        
-                                        <li class="border-color-white">
-                                            <a href="/wishlist"><i class="ion-android-favorite-outline"></i>Wishlist (0)</a>
+                                        <li>
+                                            <a href="/compare"><i class="ion-ios-shuffle-strong"></i>Compare (0)</a>
                                         </li>
                                     </ul>
-                                    <!-- Header Top Language Currency -->
-                                        <div class="header-top-set-lan-curr d-flex justify-content-end">
-                                            <div class="header-bottom-set dropdown">
-                                                <button class="dropdown-toggle header-action-btn hover-style-default color-white" data-bs-toggle="dropdown"> Settings <i
-                                                    class="ion-ios-arrow-down"></i></button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="/my-account">My account</a></li>
-                                                    <li><a class="dropdown-item" href="/checkout">Checkout</a></li>
-                                                    <li><a class="dropdown-item" href="/login">Sign in</a></li>
-                                                </ul>
-                                            </div>
-                                            
-                                            
-                                        </div>
-                                    <!-- Header Top Language Currency -->
                                 </div>
                             </div>
                             <!--Right End-->
@@ -49,7 +33,7 @@
                             <!-- Logo Start -->
                             <div class="col-md-2 col-sm-2">
                                 <div class="logo">
-                                    <a href="/"><img src="assets/images/logo/logo.png" alt="" /></a>
+                                    <a href="/"><img src="assets/images/logo/medicare-logo.svg" alt="MediCare" /></a>
                                 </div>
                             </div>
                             <!-- Logo End -->
@@ -59,9 +43,9 @@
                                 <div class="main-navigation">
                                     <ul>
                                         <li><a href="/">Home</a></li>
-                                        <li class="menu-dropdown">
+                                        <li class="menu-dropdown medicine-shop-menu">
                                             <a href="#">Shop <i class="ion-ios-arrow-down"></i></a>
-                                            <ul class="mega-menu-wrap">
+                                            <ul class="mega-menu-wrap medicine-shop-dropdown">
                                                 <li>
                                                     <ul>
                                                         <li class="mega-menu-title"><a href="#">Shop Grid</a></li>
@@ -103,7 +87,7 @@
                                                     </ul>
                                                 </li>
                                                 <li class="banner-wrapper">
-                                                    <a href="/single-product"><img src="assets/images/banner-image/banner-menu.jpg" alt="" /></a>
+                                                    <a href="/single-product"><img src="assets/images/hero/medicine-blister-packs.jpg" alt="Medicine essentials" /></a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -113,7 +97,7 @@
                                                 <li><a href="/about">About Page</a></li>
                                                 <li><a href="/cart">Cart Page</a></li>
                                                 <li><a href="/checkout">Checkout Page</a></li>
-                                                
+                                                <li><a href="/compare">Compare Page</a></li>
                                                 <li><a href="/login">Login & Regiter Page</a></li>
                                                 <li><a href="/my-account">Account Page</a></li>
                                                 <li><a href="/wishlist">Wishlist Page</a></li>
@@ -153,7 +137,7 @@
                                 <div class="header_account_area">
                                     <!--Seach Area Start -->
                                     <div class="header_account_list search_list">
-                                        <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
+                                        <a href="javascript:void(0)" aria-label="Search"><i class="ion-ios-search"></i></a>
                                         <div class="dropdown_search">
                                             <form action="#">
                                                 <input placeholder="Search entire store here ..." type="text" />
@@ -237,14 +221,32 @@
                                                         </option>
                                                     </select>
                                                 </div>
-                                                <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                                                <button type="submit" aria-label="Search"><i class="ion-ios-search"></i></button>
                                             </form>
                                         </div>
                                     </div>
                                     <!--Seach Area End -->
+                                    <div class="header-utility-links">
+                                        <a class="header-utility-link" href="/wishlist" aria-label="Wishlist">
+                                            <i class="ion-ios-heart" aria-hidden="true"></i>
+                                            <span>Wishlist</span>
+                                        </a>
+                                        <div class="header-bottom-set dropdown">
+                                            <button class="header-utility-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="ion-android-settings" aria-hidden="true"></i>
+                                                <span>Settings</span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/my-account">My account</a></li>
+                                                <li><a class="dropdown-item" href="/checkout">Checkout</a></li>
+                                                <li><a class="dropdown-item" href="/login">Sign in</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <!--Contact info Start -->
                                     <div class="contact-link">
                                         <div class="phone">
+                                            <i class="ion-ios-telephone call-us-icon" aria-hidden="true"></i>
                                             <p>Call us:</p>
                                             <a href="tel:(+800)345678">(+800)345678</a>
                                         </div>
@@ -254,6 +256,7 @@
                                     <div class="cart-info d-flex">
                                         <div class="mini-cart-warp">
                                             <a href="#offcanvas-cart" class="count-cart offcanvas-toggle color-black">
+                                                <i class="ion-ios-cart cart-nav-icon" aria-hidden="true"></i>
                                                 <span class="amount-tag">$20.00</span>
                                         <span class="item-quantity-tag">02</span>
                                             </a>
@@ -279,7 +282,7 @@
                         </div>
                         <div class="col-md-6 col-sm-4 d-flex justify-content-center">
                             <div class="logo m-0">
-                                <a href="/"><img src="assets/images/logo/logo.png" alt="" /></a>
+                                <a href="/"><img src="assets/images/logo/medicare-logo.svg" alt="MediCare" /></a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-5">
@@ -296,6 +299,7 @@
                                 </div>
                                 <div class="mini-cart-warp">
                                     <a href="#offcanvas-cart" class="count-cart offcanvas-toggle color-black">
+                                        <i class="ion-ios-cart cart-nav-icon" aria-hidden="true"></i>
                                         <span class="amount-tag">$20.00</span>
                                         <span class="item-quantity-tag">02</span>
                                     </a>

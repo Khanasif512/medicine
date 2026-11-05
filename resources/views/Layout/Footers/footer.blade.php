@@ -7,7 +7,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <!-- footer logo -->
                                 <div class="footer-logo">
-                                    <a href="/"><img src="assets/images/logo/footer-logo-medical.png" alt="Medicine" /></a>
+                                    <a href="/"><img src="assets/images/logo/medicare-footer-logo.svg" alt="MediCare" /></a>
                                 </div>
                                 <!-- footer logo -->
                                 <div class="about-footer">

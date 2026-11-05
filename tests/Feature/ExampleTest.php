@@ -9,24 +9,27 @@ class ExampleTest extends TestCase
 {
     public function test_storefront_home_and_all_migrated_pages_render(): void
     {
-        $this->get('/')
+        $home = $this->get('/')
             ->assertOk()
             ->assertSee('Welcome you the medicine store!')
             ->assertSee('<div id="preloader" aria-hidden="true">', false)
             ->assertSee('<header class="main-header"', false)
             ->assertSee('assets/css/custom-scrollbar.css', false)
-            ->assertSee('assets/css/custom-cursor.css', false)
+            ->assertDontSee('assets/css/custom-cursor.css', false)
             ->assertSee('assets/css/custom-header.css', false)
             ->assertSee('assets/css/custom-footer.css', false)
+            ->assertSee('assets/css/custom-store-sections.css', false)
             ->assertSee('assets/css/custom-home-slider.css', false)
             ->assertSee('assets/js/custom-scrollbar.js', false)
-            ->assertSee('assets/js/custom-cursor.js', false)
+            ->assertDontSee('assets/js/custom-cursor.js', false)
             ->assertSee('href="/wishlist"', false)
             ->assertDontSee('href="/compare"', false)
             ->assertDontSee('Compare Page')
             ->assertDontSee('Compare (0)')
             ->assertDontSee('Add to compare')
             ->assertSee('footer-area', false);
+
+        $this->assertSame(1, substr_count($home->getContent(), '<header class="main-header"'));
 
         foreach (glob(resource_path('views/store/*.blade.php')) as $view) {
             $page = basename($view, '.blade.php');
@@ -39,8 +42,9 @@ class ExampleTest extends TestCase
                 ->assertOk()
                 ->assertSee('<div id="preloader" aria-hidden="true">', false)
                 ->assertSee('assets/js/custom-scrollbar.js', false)
-                ->assertSee('assets/js/custom-cursor.js', false)
+                ->assertDontSee('assets/js/custom-cursor.js', false)
                 ->assertSee('assets/css/custom-footer.css', false)
+                ->assertSee('assets/css/custom-store-sections.css', false)
                 ->assertSee('main-header', false)
                 ->assertSee('<li><a href="/">Home</a></li>', false)
                 ->assertSee('<li><a href="/"><span class="menu-text">Home</span></a></li>', false)
@@ -52,6 +56,7 @@ class ExampleTest extends TestCase
                 ->assertDontSee('Add to compare')
                 ->assertDontSee('href="/index-2"', false);
 
+            $this->assertSame(1, substr_count($response->getContent(), '<header class="main-header"'), "Expected one shared header on /{$page}");
             $response->assertSee('footer-area', false);
         }
     }
